@@ -29,6 +29,7 @@ public class MoveController : MonoBehaviour
     public void Move(float moveX)
     {
         rb.velocity = new Vector2(moveX * speed, rb.velocity.y);
+        
     }
 
     public void Jump()
