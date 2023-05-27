@@ -1,20 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    private int health = 50;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
+    private int health = 5;
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -29,7 +20,14 @@ public class Player : MonoBehaviour
     public void Die()
     {
         Debug.Log("Dead!");
-        Time.timeScale = 0;
+        Restart();
+        //Time.timeScale = 0;
         //Destroy(this.gameObject);
+    }
+
+    void Restart()
+    {
+        health = 5;
+        SceneManager.LoadScene(0);
     }
 }

@@ -5,11 +5,6 @@ using UnityEngine;
 public class EnemyBird : Enemy
 {
     [SerializeField] private float speed;
-    void Start()
-    {
-        
-    }
-
 
     void Update()
     {
